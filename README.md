@@ -5,6 +5,9 @@ __Welcome to NetSecAnalyzer, a data analysis project for detecting DNS tunneling
 **Project Overview**
 
 NetSecAnalyzer analyzes DNS traffic data to identify potential DNS tunneling events. It leverages Apache Spark for scalable data processing and provides functionalities for data exploration, anomaly detection, and trend analysis.
+
+An example of how the data will look like:
+![alt text](image.png)
 ## __Important Note Before Getting Started__
 >**Remove all the files from `/data/raw` && `/data/processed` if you are changing any code from `/scripts`**
 ## **Getting Started**
