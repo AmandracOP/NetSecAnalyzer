@@ -1,22 +1,22 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
-# Initialize Spark session
+# Starting spark session
 spark = SparkSession.builder \
     .appName("DNSDataProcessing") \
     .getOrCreate()
 
-# Read the parquet file
+# Reading parquet file
 df = spark.read.parquet("data/raw/dummy_dns_data.parquet")
 
-# Show the schema
+# Viewing the schema
 df.printSchema()
 
-# Show a few rows
+# Viewing rows
 df.show(truncate=False)
 
-# Save the processed data
+# Saving the processesd data
 df.write.mode("overwrite").parquet("data/processed/processed_dns_data.parquet")
 
-# Stop the Spark session
+# Stoping spark session
 spark.stop()

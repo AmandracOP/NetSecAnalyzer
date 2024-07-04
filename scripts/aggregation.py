@@ -13,19 +13,19 @@ if __name__ == "__main__":
         .appName("DNSDataAggregation") \
         .getOrCreate()
 
-    # Read the processed data
+    # Reading the processed data
     df = spark.read.parquet("data/processed/processed_dns_data.parquet")
 
-    # Initialize the aggregator
+    # starting the aggregator
     aggregator = DataAggregator(df)
 
-    # Aggregate by domain
+    # Aggregating by domain
     domain_aggregation = aggregator.aggregate("domain")
     domain_aggregation.show()
 
-    # Aggregate by ancount
+    # Aggregating by ancount
     ancount_aggregation = aggregator.aggregate("ancount")
     ancount_aggregation.show()
 
-    # Stop the Spark session
+    # Stoping spark session
     spark.stop()

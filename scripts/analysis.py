@@ -1,26 +1,26 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count, mean, stddev, desc
 
-# Initialize Spark session
+# Starting spark session
 spark = SparkSession.builder \
     .appName("DNSDataAnalysis") \
     .getOrCreate()
 
-# Read the processed data
+# Reading the data we creaeted in data_processing.py
 df = spark.read.parquet("data/processed/processed_dns_data.parquet")
 
 # Anomalies in the data
-# For simplicity, let's assume high rcode values are anomalies
+# For simplicity, I assume high rcode values are anomalies(not necessarily true though)
 anomalies = df.filter(col("rcode") > 3)
 anomalies.show(truncate=False)
 
 # Data skew
-# Check the distribution of ancount
+# Checking distribution of ancount
 df.groupBy("ancount").count().show()
 
 # Trends in the data
 # Average ancount per domain
 df.groupBy("domain").agg(mean("ancount").alias("avg_ancount")).show()
 
-# Stop the Spark session
+# Stoping the spark session
 spark.stop()

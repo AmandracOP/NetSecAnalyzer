@@ -7,7 +7,7 @@ import pyarrow.parquet as pq
 
 # Constants
 num_rows = 1000
-domains = ["navya.com", "pentest.org", "dev.net", "anand.com", "bennett.edu"]
+domains = ["navya.com", "pentest.org", "dev.net", "anand.com", "navyait.edu"]
 types = [1, 2, 5, 6, 10, 15]
 
 # Timestamp Generation

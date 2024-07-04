@@ -92,3 +92,6 @@ output/
 custom_scripts/
 custom_modules/
 custom_data/
+
+#git ignore file
+.gitignore
