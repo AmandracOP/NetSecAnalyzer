@@ -1,0 +1,94 @@
+# General ignore rules
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments and dependencies
+navenv/
+venv/
+env/
+*.egg-info
+*.egg
+*.whl
+Pipfile
+Pipfile.lock
+
+# Python package manager
+.pytest_cache/
+.mypy_cache/
+.cache/
+.tox/
+coverage.xml
+nosetests.xml
+*.cover
+*.coverage
+*.coveragerc
+.cache/
+.pyre/
+.pytype/
+
+# Conda environments
+.env/
+*.env
+
+# Spark
+spark-warehouse/
+.metastore_db/
+.derby.log
+logs/
+
+# Data directories
+data/raw/
+data/processed/
+
+# Configuration files
+configs/spark_config.json
+configs/other_config.json
+
+# Reports (excluding template files)
+reports/findings.md
+reports/next_steps.md
+reports/scalability.md
+
+# Environments
+environment/*.yml
+environment/requirements.txt
+
+# Ignore files for all the notebooks
+*.ipynb~  # Temporary notebook files
+*.ipynb_checkpoints/
+.notebook/
+output/
+
+# User specific files
+*.local
+*.sublime*
+*.vscode
+*.code-workspace
+*.idea/
+
+# Miscellaneous
+.envrc
+*.envrc
+.secret
+.secret.*.json
+!example.secret.json
+.secret.json
+*.secrets/
+.credentials
+
+# Additional user-specific customizations
+custom_scripts/
+custom_modules/
+custom_data/
