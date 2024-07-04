@@ -49,21 +49,21 @@ spark-warehouse/
 logs/
 
 # Data directories
-data/raw/
-data/processed/
+#data/raw/
+#data/processed/
 
 # Configuration files
-configs/spark_config.json
-configs/other_config.json
+#configs/spark_config.json
+#configs/other_config.json
 
 # Reports (excluding template files)
-reports/findings.md
-reports/next_steps.md
-reports/scalability.md
+#reports/findings.md
+#reports/next_steps.md
+#reports/scalability.md
 
 # Environments
-environment/*.yml
-environment/requirements.txt
+#environment/*.yml
+#environment/requirements.txt
 
 # Ignore files for all the notebooks
 *.ipynb~  # Temporary notebook files
