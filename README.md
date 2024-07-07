@@ -42,7 +42,7 @@ navvenv\\Scripts\\activate.bat  # For Windows
   Activate your virtual environment and install the required packages listed in `requirements.txt`:
 
 ```bash
-pip install -r requirements.txt
+pip install -r environment/requirements.txt
 ```
 **Note**
 An example of absolute path
